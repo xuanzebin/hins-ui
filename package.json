@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack.dev.config.js",
-    "build": "cross-env NODE_ENV=production webpack --config ./config/webpack.pro.config.js --hide-modules"
+    "build": "cross-env NODE_ENV=production webpack --config ./config/webpack.pro.config.js --hide-modules",
+    "ts-compile-check": "tsc -p tsconfig.json --noEmit"
   },
   "lint-staged": {
     "src/**/*.(js|jsx|ts|tsx)": [
