@@ -3,9 +3,24 @@ import ReactDOM from 'react-dom'
 
 import './app.scss'
 
-function App () {
+interface Props {
+  content: string
+}
+interface State {}
+
+class Button extends React.Component<Props, State> {
+  render() {
+    const { content } = this.props
+    return <button>{content}</button>
+  }
+}
+
+function App() {
   return (
-    <div>Hello world!</div>
+    <div>
+      Hello world!
+      <Button content={'btn'} />
+    </div>
   )
 }
 
