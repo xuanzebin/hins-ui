@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.vscode
+src/assets/sprite/
+build/
+temp/
+diff.js
