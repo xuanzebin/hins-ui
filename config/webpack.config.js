@@ -19,8 +19,17 @@ module.exports = {
     symlinks: true,
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
     alias: {
-      '@app': path.resolve(__dirname, 'src'),
+      '@app': path.join(__dirname, '../', './src/'),
+      '@components': path.join(__dirname,'../', './src/components')
     },
+  },
+  module: {
+    rules: [
+      {
+        test: /\.svg$/,
+        loader: 'svg-sprite-loader'
+      }
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({

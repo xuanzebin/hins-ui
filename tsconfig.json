@@ -11,10 +11,12 @@
       "target": "es6",
       "baseUrl": ".",
       "paths": {
-      "@app": ["src"],
-      "@app/*": ["src/*"]
+        "@app": ["src"],
+        "@app/*": ["src/*"],
+        "@components": ["src/components"],
+        "@components/*": ["src/components/*"]
       },
   },
-  "include": ["src"],
+  "include": ["src", "types"],
   "exclude": ["node_modules"]
 }

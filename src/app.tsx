@@ -1,15 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Button from './Button'
+import Icon from '@components/icon'
 
 import './app.scss'
 
 function App() {
   return (
     <div>
-      Hello world!
-      <Button content={'btn'} />
+      <Icon name="browser" />
+      <Icon name="clock" />
+      <Icon name="calculator" />
     </div>
   )
 }

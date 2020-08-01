@@ -22,7 +22,7 @@ module.exports = {
     'prettier/prettier': ['error', { singleQuote: true }],
     '@typescript-eslint/explicit-member-accessibility': 0,
     '@typescript-eslint/explicit-function-return-type': 0,
-    'no-console': 'error',
+    'no-console': 'warn',
     'no-param-reassign': 'off',
     'prefer-const': 'error',
     'no-var': 'error',

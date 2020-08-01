@@ -1,5 +1,3 @@
-const path = require('path')
-
 const webpack = require('webpack')
 const { merge } = require('webpack-merge')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -27,7 +25,7 @@ module.exports = merge(common, {
         use: [babelLoader],
       },
       {
-        test: /\.(jpg|png|gif|eot|svg|ttf|woff|woff2)$/,
+        test: /\.(jpg|png|gif|eot|ttf|woff|woff2)$/,
         loader: require.resolve('file-loader'),
       },
       {
