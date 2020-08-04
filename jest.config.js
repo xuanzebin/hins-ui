@@ -20,9 +20,9 @@ module.exports = {
     "^.+test\\.(js|jsx)$": "babel-jest",
     '^.+test\\.(ts|tsx)$': 'ts-jest',
   },
-  // moduleNameMapper: {
-  //   "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/test/__mocks__/file-mock.js",
-  //   "\\.(css|less|sass|scss)$": "<rootDir>/test/__mocks__/object-mock.js",
-  // },
+  moduleNameMapper: {
+    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/test/__mocks__/file-mock.js",
+    "\\.(css|less|sass|scss)$": "<rootDir>/test/__mocks__/object-mock.js",
+  },
   // setupFilesAfterEnv: ["<rootDir>test/setupTests.js"]
 }

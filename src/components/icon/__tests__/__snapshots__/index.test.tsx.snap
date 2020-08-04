@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`icon snapshot test 1`] = `
+<div
+  className="icon-wrapper"
+>
+  <svg
+    className="hins-icon"
+  >
+    <use
+      xlinkHref="#clock"
+    />
+  </svg>
+</div>
+`;
