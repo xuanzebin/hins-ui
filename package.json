@@ -7,7 +7,8 @@
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack.dev.config.js",
     "build": "cross-env NODE_ENV=production webpack --config ./config/webpack.pro.config.js --hide-modules",
     "ts-compile-check": "tsc -p tsconfig.json --noEmit",
-    "test": "cross-env NODE_ENV=test jest --config=jest.config.js --runInBand"
+    "test": "cross-env NODE_ENV=test jest --config=jest.config.js --runInBand",
+    "ci": "cross-env NODE_ENV=test JEST_JUNIT_OUTPUT_DIR=./test-results/jest JEST_JUNIT_OUTPUT_NAME=result.xml jest --config=jest.config.ci.js"
   },
   "lint-staged": {
     "src/**/*.(js|jsx|ts|tsx)": [
@@ -65,6 +66,7 @@
     "html-webpack-plugin": "^4.3.0",
     "husky": "^4.2.5",
     "jest": "^26.1.0",
+    "jest-junit": "^11.1.0",
     "jsdom": "^16.3.0",
     "jsdom-global": "^3.0.2",
     "lint-staged": "^10.2.11",

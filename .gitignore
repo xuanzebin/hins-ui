@@ -5,3 +5,5 @@ src/assets/sprite/
 build/
 temp/
 diff.js
+coverage/
+test-results/

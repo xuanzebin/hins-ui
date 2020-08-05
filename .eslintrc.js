@@ -51,7 +51,7 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   overrides: [
     {
-      files: ['webpack.config.*', 'config/*', 'test/*'],
+      files: ['webpack.config.*', 'config/*', 'test/*', 'jest.config.*'],
       env: {
         node: true,
       },
