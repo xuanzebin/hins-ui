@@ -58,7 +58,7 @@ workflows:
   version: 2
   build_accept_deploy:
     jobs:
-      - prepare
+      - prepare:
           filters:
             tags:
               only: /.*/
