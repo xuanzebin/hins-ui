@@ -65,11 +65,14 @@ workflows:
       - build:
           requires:
             - test
+          filters:
+            tags:
+              only: /^v.*/
       - publish:
           requires:
             - build
-          # filters:
-          #   tags:
-          #     only: /^v.*/
-          #   branches:
-          #     ignore: /.*/
+          filters:
+            tags:
+              only: /^v.*/
+            branches:
+              ignore: /.*/
