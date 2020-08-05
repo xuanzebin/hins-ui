@@ -9,7 +9,7 @@ spawn.sync('git', ['add', '.'], {
   stdio: 'inherit'
 })
 
-spawn.sync('git', ['commit', '-m', 'feat: go deploy'], {
+spawn.sync('git', ['commit', '-m', 'feat: 发布hinus-ui新版本'], {
   stdio: 'inherit'
 })
 
