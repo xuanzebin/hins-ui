@@ -65,9 +65,15 @@ workflows:
       - test:
           requires:
             - prepare
+          filters:
+            tags:
+              only: /^v.*/
       - build:
           requires:
             - test
+          filters:
+            tags:
+              only: /^v.*/
       - publish:
           requires:
             - build
