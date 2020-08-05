@@ -69,7 +69,7 @@ module.exports = merge(common, {
         ],
       },
       {
-        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        test: /\.(eot|ttf|woff|woff2)$/,
         use: [
           {
             loader: require.resolve('file-loader'),
