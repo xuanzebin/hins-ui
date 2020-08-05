@@ -56,7 +56,7 @@ jobs:
 
 workflows:
   version: 2
-  build_accept_deploy:
+  deploy_publish:
     jobs:
       - prepare:
           filters:
@@ -65,15 +65,9 @@ workflows:
       - test:
           requires:
             - prepare
-          filters:
-            tags:
-              only: /^v.*/
       - build:
           requires:
             - test
-          filters:
-            tags:
-              only: /^v.*/
       - publish:
           requires:
             - build

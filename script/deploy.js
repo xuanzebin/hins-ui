@@ -17,6 +17,6 @@ spawn.sync('npm', ['version', action], {
   stdio: 'inherit'
 })
 
-spawn.sync('git', ['push', '--follow-tags', '-f'], {
+spawn.sync('git', ['push', '--tags', '-f'], {
   stdio: 'inherit'
 })
