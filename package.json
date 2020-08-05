@@ -3,14 +3,16 @@
   "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",
-  "files": ["./dist"],
+  "files": [
+    "./dist"
+  ],
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack.dev.config.js",
     "build": "cross-env NODE_ENV=production webpack --config ./config/webpack.pro.config.js --hide-modules",
     "ts-compile-check": "tsc -p tsconfig.json --noEmit",
     "test": "cross-env NODE_ENV=test jest --config=jest.config.js --runInBand",
     "ci": "cross-env NODE_ENV=test JEST_JUNIT_OUTPUT_DIR=./test-results/jest JEST_JUNIT_OUTPUT_NAME=result.xml jest --config=jest.config.ci.js",
-    "deploy": "./script/.deploy.sh"
+    "deploy": "node ./script/deploy.js"
   },
   "lint-staged": {
     "src/**/*.(js|jsx|ts|tsx)": [
@@ -49,6 +51,7 @@
     "commitlint": "^9.1.0",
     "core-js": "3",
     "cross-env": "^7.0.2",
+    "cross-spawn": "^7.0.3",
     "css-loader": "^3.6.0",
     "cssnano": "^4.1.10",
     "cssnano-preset-default": "^4.0.7",
