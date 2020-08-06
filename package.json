@@ -11,7 +11,8 @@
     "build": "cross-env NODE_ENV=production webpack --config ./config/webpack.pro.config.js --hide-modules",
     "ts-compile-check": "tsc -p tsconfig.json --noEmit",
     "test": "cross-env NODE_ENV=test jest --config=jest.config.js --runInBand",
-    "ci": "cross-env NODE_ENV=test JEST_JUNIT_OUTPUT_DIR=./test-results/jest JEST_JUNIT_OUTPUT_NAME=result.xml jest --config=jest.config.ci.js",
+    "ci": "cross-env NODE_ENV=test JEST_JUNIT_OUTPUT_DIR=./test-results/jest JEST_JUNIT_OUTPUT_NAME=result.xml jest --config=jest.config.ci.js && yarn coveralls",
+    "coveralls": "coveralls < coverage\\lcov.info",
     "deploy": "node ./script/deploy.js"
   },
   "lint-staged": {
@@ -50,6 +51,7 @@
     "babel-loader": "^8.1.0",
     "commitlint": "^9.1.0",
     "core-js": "3",
+    "coveralls": "^3.1.0",
     "cross-env": "^7.0.2",
     "cross-spawn": "^7.0.3",
     "css-loader": "^3.6.0",
