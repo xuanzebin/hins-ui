@@ -12,7 +12,7 @@
     "ts-compile-check": "tsc -p tsconfig.json --noEmit",
     "test": "cross-env NODE_ENV=test jest --config=jest.config.js --runInBand",
     "ci": "cross-env NODE_ENV=test JEST_JUNIT_OUTPUT_DIR=./test-results/jest JEST_JUNIT_OUTPUT_NAME=result.xml jest --config=jest.config.ci.js && yarn coveralls",
-    "coveralls": "coveralls < coverage\\lcov.info",
+    "coveralls": "coveralls < coverage/lcov.info",
     "deploy": "node ./script/deploy.js"
   },
   "lint-staged": {
