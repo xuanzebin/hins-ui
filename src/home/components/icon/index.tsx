@@ -1,11 +1,8 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 
 import Icon from '@components/icon'
 
-import './app.scss'
-
-function App() {
+function IconContent() {
   return (
     <div>
       <Icon name="browser" />
@@ -15,4 +12,4 @@ function App() {
   )
 }
 
-ReactDOM.render(<App />, document.querySelector('#root'))
+export default IconContent

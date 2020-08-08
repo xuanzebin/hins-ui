@@ -1,6 +1,3 @@
-const path = require('path')
-
-const webpack = require('webpack')
 const { merge } = require('webpack-merge')
 const autoprefixer = require('autoprefixer')
 const TerserPlugin = require('terser-webpack-plugin')
@@ -8,13 +5,26 @@ const CssnanoDefaultPreset = require('cssnano-preset-default')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
+const paths = require('./paths')
 const common = require('./webpack.config')
 
+const PUBLIC_PATH = '/'
 const babelLoader = require.resolve('babel-loader')
 
 module.exports = merge(common, {
   mode: 'production',
   devtool: false,
+  entry: {
+    index: paths.appMainJs,
+  },
+  output: {
+    path: paths.appBuild,
+    filename: 'static/js/[name].js',
+    chunkFilename: 'static/js/[name].chunk.js',
+    publicPath: PUBLIC_PATH,
+    libraryTarget: 'umd',
+    library: 'HinsUI'
+  },
   optimization: {
     minimize: true,
     minimizer: [

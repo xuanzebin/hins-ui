@@ -2,13 +2,18 @@ const webpack = require('webpack')
 const { merge } = require('webpack-merge')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
+const paths = require('./paths')
 const common = require('./webpack.config')
 
+const PUBLIC_PATH = '/'
 const babelLoader = require.resolve('babel-loader')
 
 module.exports = merge(common, {
   mode: 'development',
   devtool: 'cheap-module-source-map',
+  entry: {
+    index: paths.appHomeJs
+  },
   devServer: {
     host: '0.0.0.0',
     disableHostCheck: true,
