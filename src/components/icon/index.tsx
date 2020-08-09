@@ -6,7 +6,7 @@ import { IconProps } from './index.d'
 import './importIcons'
 import './index.scss'
 
-const icon: React.FunctionComponent<IconProps> = (props) => {
+const Icon: React.FunctionComponent<IconProps> = (props) => {
   const { name, className, style, ...restProps } = props
 
   return (
@@ -18,4 +18,4 @@ const icon: React.FunctionComponent<IconProps> = (props) => {
   )
 }
 
-export default icon
+export default Icon
