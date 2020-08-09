@@ -28,6 +28,7 @@ function App() {
         </aside>
         <main>
           <Route path="/icon" component={Icon} />
+          <Route path="/button" component={Button} />
           <Route path="/dialog" component={Dialog} />
         </main>
       </div>
