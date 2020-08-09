@@ -1,0 +1,20 @@
+* [class^='hins'] {
+  box-sizing: border-box;
+
+  svg {
+    fill: currentColor;
+  }
+
+  button {
+    padding: 5px 10px;
+    margin: 0 5px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

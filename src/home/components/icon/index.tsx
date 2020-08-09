@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Icon from '@components/icon'
+import { Icon } from '@app'
 
 function IconContent() {
   return (
