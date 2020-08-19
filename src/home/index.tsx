@@ -6,6 +6,7 @@ import { HashRouter as Router, Link, Route } from 'react-router-dom'
 import Icon from './components/icon'
 import Button from './components/button'
 import Dialog from './components/dialog'
+import Layout from './components/layout'
 
 import './index.scss'
 
@@ -24,12 +25,16 @@ function App() {
             <li>
               <Link to="/dialog">Dialog</Link>
             </li>
+            <li>
+              <Link to="/layout">Layout</Link>
+            </li>
           </ul>
         </aside>
         <main>
           <Route path="/icon" component={Icon} />
           <Route path="/button" component={Button} />
           <Route path="/dialog" component={Dialog} />
+          <Route path="/layout" component={Layout} />
         </main>
       </div>
     </Router>

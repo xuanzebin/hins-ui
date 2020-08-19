@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import { Dialog } from '@app'
 
-function IconContent() {
+function DialogContent() {
   const [isShow, setIsShow] = useState(false)
 
   const handleClick = () => {
@@ -70,4 +70,4 @@ function IconContent() {
   )
 }
 
-export default IconContent
+export default DialogContent
