@@ -1,42 +1,52 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { HashRouter as Router, NavLink as Link, Route } from 'react-router-dom'
 
-import { HashRouter as Router, Link, Route } from 'react-router-dom'
+import { Layout, Header, Content, Footer, Sider } from '@app'
 
-import Icon from './components/icon'
-import Button from './components/button'
-import Dialog from './components/dialog'
-import Layout from './components/layout'
+import logo from '../assets/logo/logo.png'
+import { IconExample, ButtonExample, DialogExample, LayoutExample } from './components'
 
 import './index.scss'
 
 function App() {
   return (
     <Router>
-      <div>
-        <aside>
-          <ul>
-            <li>
-              <Link to="/icon">Icon</Link>
-            </li>
-            <li>
-              <Link to="/button">Button</Link>
-            </li>
-            <li>
-              <Link to="/dialog">Dialog</Link>
-            </li>
-            <li>
-              <Link to="/layout">Layout</Link>
-            </li>
-          </ul>
-        </aside>
-        <main>
-          <Route path="/icon" component={Icon} />
-          <Route path="/button" component={Button} />
-          <Route path="/dialog" component={Dialog} />
-          <Route path="/layout" component={Layout} />
-        </main>
-      </div>
+      <Layout className="hins-ui-page">
+        <Header>
+          <img src={logo} alt="" />
+          <span>HINS UI</span>
+        </Header>
+        <Layout>
+          <Sider>
+            <ul>
+              <li>
+                <Link to="/icon">Icon</Link>
+              </li>
+              <li>
+                <Link to="/button">Button</Link>
+              </li>
+              <li>
+                <Link to="/dialog">Dialog</Link>
+              </li>
+              <li>
+                <Link to="/layout">Layout</Link>
+              </li>
+            </ul>
+          </Sider>
+          <Content>
+            <main>
+              <Route path="/icon" component={IconExample} />
+              <Route path="/button" component={ButtonExample} />
+              <Route path="/dialog" component={DialogExample} />
+              <Route path="/layout" component={LayoutExample} />
+            </main>
+          </Content>
+        </Layout>
+        <Footer>
+          <span>&copy; 宣泽彬</span>
+        </Footer>
+      </Layout>
     </Router>
   )
 }

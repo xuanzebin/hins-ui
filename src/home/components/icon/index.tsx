@@ -1,15 +1,16 @@
 import React from 'react'
 
-import { Icon } from '@app'
+import Example from '../example'
 
-function IconContent() {
+import DialogCode from '!!raw-loader!./example'
+import Icon from './example'
+
+const IconExample: React.FC<{}> = () => {
   return (
-    <div>
-      <Icon name="browser" />
-      <Icon name="clock" />
-      <Icon name="calculator" />
-    </div>
+    <Example code={DialogCode}>
+      <Icon />
+    </Example>
   )
 }
 
-export default IconContent
+export default IconExample
