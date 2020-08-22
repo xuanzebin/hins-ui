@@ -1,0 +1,33 @@
+.layout-example-wrapper {
+  max-width: 740px;
+}
+
+.hins-layout {
+  text-align: center;
+  height: 100%;
+  color: white;
+
+  &-header,
+  &-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+    background-color: #7dbcea;
+  }
+
+  &-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 120px;
+    background-color: rgba(16, 142, 233, 1);
+  }
+
+  &-sider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3ba0e9;
+  }
+}

@@ -2,9 +2,11 @@ import React from 'react'
 
 import { Layout, Header, Content, Footer, Sider } from '@components/Layout'
 
+import './index.scss'
+
 function LayoutContent() {
   return (
-    <div>
+    <div className="layout-example-wrapper">
       <div>
         <p>example 1</p>
         <Layout>
