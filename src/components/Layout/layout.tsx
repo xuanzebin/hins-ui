@@ -24,13 +24,17 @@ function checkElementHaveSider(element: Exclude<React.ReactNode, React.ReactNode
 }
 
 const Layout: React.FC<LayoutProps> = (props) => {
-  const { children } = props
+  const { children, className, ...resetProps } = props
   const isSingleChildren = !(children instanceof Array)
   const hasSider = isSingleChildren
     ? checkElementHaveSider(children)
     : (children as ReactElement[]).some((child) => checkElementHaveSider(child))
 
-  return <div className={classnames(sc(), { hasSider })}>{children}</div>
+  return (
+    <div className={classnames(sc(), { hasSider }, className)} {...resetProps}>
+      {children}
+    </div>
+  )
 }
 
 export default Layout

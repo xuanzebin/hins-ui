@@ -1,9 +1,11 @@
-export interface LayoutProps {}
+import { HTMLAttributes } from 'enzyme'
 
-export interface HeaderProps {}
+export interface LayoutProps extends HTMLAttributes {}
 
-export interface ContentProps {}
+export interface HeaderProps extends HTMLAttributes {}
 
-export interface FooterProps {}
+export interface ContentProps extends HTMLAttributes {}
 
-export interface SiderProps {}
+export interface FooterProps extends HTMLAttributes {}
+
+export interface SiderProps extends HTMLAttributes {}

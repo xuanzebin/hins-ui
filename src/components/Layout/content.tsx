@@ -1,4 +1,5 @@
 import React from 'react'
+import classnames from 'classnames'
 
 import { scopedClassMaker } from '@components/helper'
 
@@ -8,8 +9,13 @@ const scopedClass = scopedClassMaker('hins-layout')
 const sc = scopedClass
 
 const Content: React.FC<ContentProps> = (props) => {
-  const { children } = props
-  return <div className={sc('content')}>{children}</div>
+  const { children, className, ...resetProps } = props
+
+  return (
+    <div className={classnames(sc('content'), className)} {...resetProps}>
+      {children}
+    </div>
+  )
 }
 
 export default Content
