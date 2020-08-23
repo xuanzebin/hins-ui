@@ -8,7 +8,7 @@ spawn.sync('git', ['checkout', 'doc-page', '-f'], {
   stdio: 'inherit'
 })
 
-spawn.sync('mv', ['./doc/*', '.', '-f'], {
+spawn.sync('cp', ['-rf', './doc/*', '.'], {
   stdio: 'inherit'
 })
 
