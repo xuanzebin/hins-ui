@@ -62,24 +62,18 @@ workflows:
           filters:
             tags:
               only: /^v.*/
-            branches:
-              only: master
       - test:
           requires:
             - prepare
           filters:
             tags:
               only: /^v.*/
-            branches:
-              only: master
       - build:
           requires:
             - test
           filters:
             tags:
               only: /^v.*/
-            branches:
-              only: master
       - publish:
           requires:
             - build
