@@ -2,6 +2,7 @@ const { merge } = require('webpack-merge')
 const autoprefixer = require('autoprefixer')
 const TerserPlugin = require('terser-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CssnanoDefaultPreset = require('cssnano-preset-default')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
@@ -103,6 +104,7 @@ module.exports = merge(common, {
     ],
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: 'static/css/[name].css',
       chunkFilename: 'static/css/[name].chunk.css',
