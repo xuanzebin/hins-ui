@@ -1,5 +1,7 @@
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+
+const babelLoader = require.resolve('babel-loader')
+const tsLoader = require.resolve('ts-loader')
 
 const paths = require('./paths')
 
@@ -14,6 +16,16 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.tsx?$/,
+        exclude: /(node_modules|dist)/,
+        use: [babelLoader, tsLoader],
+      },
+      {
+        test: /\.jsx?$/,
+        exclude: /(node_modules|dist)/,
+        use: [babelLoader],
+      },
       {
         test: /\.svg$/,
         loader: 'svg-sprite-loader'

@@ -1,14 +1,15 @@
 {
   "compilerOptions": {
       "allowSyntheticDefaultImports": true,
-      "declaration": false,
+      "declaration": true,
+      "declarationDir": "./dist/",
       "jsx": "react",
-      "module": "amd",
+      "module": "esnext",
       "moduleResolution": "node",
       "outDir": "./dist/",
       "rootDir": ".",
       "sourceMap": true,
-      "target": "es6",
+      "target": "es5",
       "baseUrl": ".",
       "paths": {
         "@app": ["src"],

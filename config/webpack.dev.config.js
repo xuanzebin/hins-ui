@@ -6,8 +6,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const paths = require('./paths')
 const common = require('./webpack.config')
 
-const babelLoader = require.resolve('babel-loader')
-
 module.exports = merge(common, {
   mode: 'development',
   devtool: 'cheap-module-source-map',
@@ -24,11 +22,6 @@ module.exports = merge(common, {
   },
   module: {
     rules: [
-      {
-        test: /\.(js|jsx|ts|tsx)?$/,
-        exclude: /(node_modules|dist)/,
-        use: [babelLoader],
-      },
       {
         test: /\.(jpg|png|gif|eot|ttf|woff|woff2)$/,
         loader: require.resolve('file-loader'),

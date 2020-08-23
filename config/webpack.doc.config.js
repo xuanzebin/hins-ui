@@ -10,7 +10,6 @@ const paths = require('./paths')
 const common = require('./webpack.config')
 
 const PUBLIC_PATH = '/'
-const babelLoader = require.resolve('babel-loader')
 
 module.exports = merge(common, {
   mode: 'production',
@@ -60,11 +59,6 @@ module.exports = merge(common, {
   },
   module: {
     rules: [
-      {
-        test: /\.(js|jsx|ts|tsx)?$/,
-        exclude: /node_modules/,
-        use: [babelLoader],
-      },
       {
         test: /\.(jpe?g|png|gif)$/,
         use: [

@@ -61,11 +61,6 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
-        test: /\.(js|jsx|ts|tsx)?$/,
-        exclude: /(node_modules|dist)/,
-        use: [babelLoader],
-      },
-      {
         test: /\.(jpe?g|png|gif)$/,
         use: [
           {
