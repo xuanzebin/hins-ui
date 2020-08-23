@@ -70,12 +70,16 @@ workflows:
           filters:
             tags:
               only: /^v.*/
+            branches:
+              ignore: /doc-page/
       - build:
           requires:
             - test
           filters:
             tags:
               only: /^v.*/
+            branches:
+              ignore: /doc-page/
       - publish:
           requires:
             - build

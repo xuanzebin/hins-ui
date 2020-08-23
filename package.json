@@ -7,6 +7,7 @@
   "files": [
     "/dist/**/*"
   ],
+  "homepage": "https://github.com/xuanzebin/hins-ui",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack.dev.config.js",
     "build": "cross-env NODE_ENV=production webpack --config ./config/webpack.pro.config.js --hide-modules",
