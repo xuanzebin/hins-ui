@@ -10,7 +10,7 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const paths = require('./paths')
 const common = require('./webpack.config')
 
-const PUBLIC_PATH = '/'
+const PUBLIC_PATH = '/hins-ui/'
 
 module.exports = merge(common, {
   mode: 'production',
