@@ -4,11 +4,11 @@ spawn.sync('yarn', ['doc'], {
   stdio: 'inherit'
 })
 
-spawn.sync('mv', ['./doc/*', '.', '-f'], {
+spawn.sync('git', ['checkout', 'doc-page', '-f'], {
   stdio: 'inherit'
 })
 
-spawn.sync('git', ['checkout', 'doc-page', '-f'], {
+spawn.sync('mv', ['./doc/*', '.', '-f'], {
   stdio: 'inherit'
 })
 
