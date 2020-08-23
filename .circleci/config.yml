@@ -63,7 +63,7 @@ workflows:
             tags:
               only: /^v.*/
             branches:
-              ignore: /doc-page/
+              only: master
       - test:
           requires:
             - prepare
@@ -71,7 +71,7 @@ workflows:
             tags:
               only: /^v.*/
             branches:
-              ignore: /doc-page/
+              only: master
       - build:
           requires:
             - test
@@ -79,7 +79,7 @@ workflows:
             tags:
               only: /^v.*/
             branches:
-              ignore: /doc-page/
+              only: master
       - publish:
           requires:
             - build
