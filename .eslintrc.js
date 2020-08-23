@@ -37,7 +37,8 @@ module.exports = {
     '@typescript-eslint/no-empty-interface': 0,
     '@typescript-eslint/no-object-literal-type-assertion': 'warn',
     'prettier/prettier': 'off',
-    'no-empty': 'off'
+    'no-empty': 'off',
+    '@typescript-eslint/no-var-requires': 'off'
   },
   globals: {
     $: true,

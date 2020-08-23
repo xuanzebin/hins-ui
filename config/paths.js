@@ -24,6 +24,7 @@ module.exports = {
   dotenv: resolveApp('.env'),
   appPath: resolveApp('.'),
   appBuild: resolveApp('dist'),
+  appDocBuild: resolveApp('doc'),
   appPublic: resolveApp('public'),
   appHtml: resolveApp('public/index.html'),
   appMainJs: resolveModule(resolveApp, 'src/index'),

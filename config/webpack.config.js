@@ -19,11 +19,6 @@ module.exports = {
         loader: 'svg-sprite-loader'
       }
     ]
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: paths.appHtml,
-    }),
-  ]
+  }
 }
   

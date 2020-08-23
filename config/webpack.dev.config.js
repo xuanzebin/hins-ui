@@ -1,11 +1,11 @@
 const webpack = require('webpack')
 const { merge } = require('webpack-merge')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 const paths = require('./paths')
 const common = require('./webpack.config')
 
-const PUBLIC_PATH = '/'
 const babelLoader = require.resolve('babel-loader')
 
 module.exports = merge(common, {
@@ -64,5 +64,8 @@ module.exports = merge(common, {
       filename: 'static/css/[name].css',
       chunkFilename: 'static/css/[name].chunk.css',
     }),
+    new HtmlWebpackPlugin({
+      template: paths.appHtml,
+    })
   ]
 })
